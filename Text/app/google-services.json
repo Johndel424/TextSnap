@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "238920227552",
+    "firebase_url": "https://textsnap-5ef5d-default-rtdb.firebaseio.com",
+    "project_id": "textsnap-5ef5d",
+    "storage_bucket": "textsnap-5ef5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238920227552:android:406b3c37eb9b8607500e85",
+        "android_client_info": {
+          "package_name": "com.example.text"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238920227552-jsoohpqscu1sbiokg3nd5avtmd5hs0t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD4aXQqw6_rapqa2mrffppWnKHeFoksm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238920227552-jsoohpqscu1sbiokg3nd5avtmd5hs0t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

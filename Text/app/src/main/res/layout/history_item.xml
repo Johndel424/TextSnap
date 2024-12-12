@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:id="@+id/recCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginVertical="5dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:textSize="17sp"
+            android:fontFamily="@font/arimo"
+            android:layout_centerVertical="true"
+            android:text="Name Here"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timestamp"
+            android:fontFamily="@font/arimo"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:layout_toStartOf="@id/delete"
+            android:text="10:10 AM"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <!-- Three dot (overflow) button -->
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/bin"
+            android:contentDescription="More options"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:background="@color/blue"/>
+</LinearLayout>

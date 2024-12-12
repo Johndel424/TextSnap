@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:backgroundTint="#ffffff"
+    android:layout_alignParentEnd="true"
+    android:id="@+id/sender_layout">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/otherLayout"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pic"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="100dp" >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/logoo"
+                android:layout_centerVertical="true"/>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/pic"
+            android:background="@drawable/aibg"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/otherTextLayout"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:id="@+id/otherText"
+                android:text="Username here"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/otherLayout"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/otherSettings"
+        android:layout_marginStart="50dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/copy"
+            android:layout_width="20dp"
+            android:tooltipText="Copy"
+            android:layout_height="20dp"
+            android:src="@drawable/copy"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackground"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/userLayout"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_marginStart="100dp"
+            android:id="@+id/userTextLayout"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/userText"
+                android:text="Username here"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

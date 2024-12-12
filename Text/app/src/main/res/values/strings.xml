@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Text</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="spinner_items">
+        <item>English</item>
+        <item>Tagalog</item>
+    </string-array>
+</resources>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity.Home">
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_above="@id/menu"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@id/menu"
+        android:id="@+id/homeLayout"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- First RelativeLayout for Header and Spinner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative"
+            android:background="@color/blue"
+            android:layout_height="50dp">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_quiz_24"
+                android:scaleType="centerCrop"
+                android:padding="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/quiz" />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/edit"
+                android:scaleType="centerCrop"
+                android:padding="12dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/Button" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/logoo"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextSnap"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- First Page Layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/firstPage"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_above="@id/layout"
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:text="Choose to generate text from image."
+                android:textAlignment="center"
+                android:textSize="17sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/layout"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg"
+
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:padding="8dp"
+                        android:id="@+id/openCameraButton"
+                        android:layout_height="100dp"
+                        android:src="@drawable/camera"
+                        android:scaleType="fitXY"
+                        android:background="?attr/selectableItemBackground" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_above="@id/layout"
+                        android:padding="8dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="30dp"
+                        android:text="Take a picture."
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:background="@drawable/bg"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:padding="8dp"
+                        android:id="@+id/openGalleryButton"
+                        android:layout_height="100dp"
+                        android:src="@drawable/gallery"
+                        android:scaleType="fitXY"
+                        android:background="?attr/selectableItemBackground"
+                        android:tooltipText="Gallery" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_above="@id/layout"
+                        android:padding="8dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="30dp"
+                        android:text="Choose from gallery."
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Second Page with ScrollView for Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/secondPage"
+            android:visibility="gone"
+            android:layout_below="@id/relative">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="5dp"
+                        android:background="@drawable/text_bg"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/titleHere"
+                            android:padding="15dp"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Recognized text will appear here"
+                            android:layout_gravity="center" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/blue"/>
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/blue"/>
+                        <TextView
+                            android:id="@+id/textView"
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Recognized text will appear here"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- First View at the start (e.g., TextView) -->
+                        <LinearLayout
+                            android:id="@+id/endButton"
+                            android:padding="10dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_background"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageButton
+                                android:id="@+id/copy"
+                                android:layout_width="30dp"
+                                android:tooltipText="Copy"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/copy"
+                                android:scaleType="centerCrop"
+                                android:background="?attr/selectableItemBackground"
+                                android:layout_marginStart="5dp"
+                                android:layout_centerVertical="true" />
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_gravity="center_vertical"
+                                android:popupBackground="@android:color/white"
+                                android:drawableEnd="@drawable/baseline_arrow_drop_down_24" />
+
+                        </LinearLayout>
+                        <!-- Spacer to push the second view to the end -->
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <!-- Second View at the end (e.g., Button) -->
+
+                        <TextView
+                            android:id="@+id/myButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="Generate Reviewer"
+                            android:layout_gravity="center_vertical"
+                            android:drawablePadding="8dp"
+                            android:padding="15dp"
+                            android:background="@drawable/spinner_background2"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/menu_bg"
+        android:id="@+id/menu"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-3dp"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/home"
+                    android:layout_width="40dp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/menu_home_selected"
+                    android:scaleType="fitXY"
+                    android:background="?attr/selectableItemBackground"
+                    android:tooltipText="Home"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ai"
+                    android:layout_width="40dp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/menu_ai_unselected"
+                    android:scaleType="fitXY"
+                    android:background="?attr/selectableItemBackground"
+                    android:tooltipText="Ai"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ai"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/save"
+                    android:layout_width="40dp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/menu_download_unselected"
+                    android:scaleType="fitXY"
+                    android:background="?attr/selectableItemBackground"
+                    android:tooltipText="Save"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/history"
+                    android:layout_width="40dp"
+                    android:padding="5dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="-5dp"
+                    android:src="@drawable/menu_history_unselected"
+                    android:scaleType="fitXY"
+                    android:background="?attr/selectableItemBackground"
+                    android:tooltipText="History"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/profile"
+                    android:layout_width="40dp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="-5dp"
+                    android:src="@drawable/menu_profile_unselected"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="3dp"
+                    android:scaleType="fitXY"
+                    android:background="?attr/selectableItemBackground"
+                    android:tooltipText="Profile"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
